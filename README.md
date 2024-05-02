@@ -1,13 +1,10 @@
-# CSPB_2700_FP
-Final Project
-
 # Decision Tree Implementation
 CSPB-2700 Final Project
 
 Justin Reid
 
 ## Overview
-For my project I implemented and tested a decision tree structure in Python. I used a publicly available dataset (citation) related to health metrics and drug prescriptions. I used part of the dataset to build the decision tree, and then used the tree to predict which drug was prescriped to the remaining persons represented in the data. Finally, I implemented simple system for testing this process repeatedly to determine its average accuracy and then visualize the distribution of the % correct predictions. 
+For my project I implemented and tested a decision tree structure in Python. I used a publicly available dataset related to health metrics and drug prescriptions. I used part of the dataset to build the decision tree, and then used the tree to predict which drug was prescriped to the remaining persons represented in the data. Finally, I implemented simple system for testing this process repeatedly to determine its average accuracy and then visualize the distribution of the % correct predictions. 
 
 ## Classes
 Generally, decision trees utilize two separate node types, 1) a decision node, which contains a "test" that determines which proceeding node is checked, and a leaf node that contains data that has been separated based on the decision nodes. For example, in my dataset one level of nodes may contain tests for the "blood pressure" attribute (which has values of "low", "medium" and "high"). In predicting the drug recieved by some unknown patient, the node represents the value matching the unknown patient value will be visited. The children of that decision node will contain tests for another attribute, and that process will repeat until finally a leaf node is reached, which contain no test and only the value(s) of interest (i.e. the prescribed drug)
@@ -49,4 +46,6 @@ Finally, the tree-building and prediction-making process is tested 100 times. Tr
 ## Conclusion
 The prediction accuracy was quite high, generally from 92.0-98.0%. This is not very surprsing considering this dataset was apparently designed for implementing this particular structure. Although the above is not particularly interesting to consider, it does show that the algorithm functions correctly for this particular dataset. 
 
+## Dataset Citation
 
+jeevanrh. (2020). *Drug200.csv*. Kaggle. https://www.kaggle.com/datasets/jeevanrh/drug200csv
