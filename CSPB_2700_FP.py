@@ -89,38 +89,6 @@ makeAttributeNodes(rootNode, rootNode.data, curBestAttribute)
 #Now all child nodes in root nodes contain data
 buildTree(rootNode)
 
-"""
-node = rootNode.childNodes[0]
-print("Child1")
-print(node.attribute)
-print(node.test)
-print(node.data)
-
-print("Child2")
-node = node.childNodes[0]
-print(node.attribute)
-print(node.test)
-print(node.data)
-
-node = node.childNodes[0]
-print("Child3")
-print(node.attribute)
-print(node.test)
-print(node.data)
-
-node = node.childNodes[0]
-print("Child4")
-print(node.attribute)
-print(node.test)
-print(node.data)
-
-
-node = node.childNodes[0]
-print("Child5")
-print(node.attribute)
-print(node.test)
-print(node.data) """
-
 def probeNode(testdata, node, attribute):
     testValue = testdata[attribute]
     nodeValue = node.data[attribute].unique()
@@ -169,13 +137,12 @@ for j in range(100):
     proportionCorrect = numCorrectEvals/numEvaluations * 100
     correctEvalsList.append(proportionCorrect)
 
-print(correctEvalsList)
 average = sum(correctEvalsList)/len(correctEvalsList)
 
 plt.hist(correctEvalsList, align= "mid")
 plt.xlabel("Succesful Drug Identification in 25 Attempts (%)")
 plt.xlabel("Frequency")
-plt.title("Successful Identification - 50 Runs, Average = " + str(average))
+plt.title("Successful Identification - 100 Runs, Average = " + str(average))
 plt.show()
 
 
